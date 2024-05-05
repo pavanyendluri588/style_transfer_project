@@ -28,7 +28,7 @@ async def apply_style_transfer(payload_received: dict):
         # style_image = Image.fromarray(style_image)
         # print("content_image",content_image.shape)
         # print("style_image",style_image.shape)
-        numepochs = 150
+        numepochs = 1500
         styleScaling = payload_received["style_strength"]
         learning_rate = 0.005
         layers4content = ['ConvLayer_1', 'ConvLayer_4']
