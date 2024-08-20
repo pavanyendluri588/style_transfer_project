@@ -95,7 +95,7 @@ This project implements a style transfer algorithm using FastAPI and PyTorch. Th
    1.Send a POST request to /style_transfer with the required images and parameters.
    2.Receive the processed image in response.
    * **Example Request**:
-    ```bash
+    ``` bash
     curl -X POST "http://localhost:8000/style_transfer" -H "Content-Type: application/json" -d '{
     "content_image": [/* Array of pixel values */],
     "style_image": [/* Array of pixel values */],
