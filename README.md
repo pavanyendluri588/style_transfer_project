@@ -75,7 +75,13 @@ This project implements a style transfer algorithm using FastAPI and PyTorch. Th
    * **pandas: 2.2.2**
    * **pillow: 10.3.0**
    * **requests: 2.31.0**
-   * **streamlit: 1.34.0**
+   * **streamlit==1.34.0**
+   * **uvicorn**
+   * **torch**
+   * **torchvision**
+   * **imageio**
+   * **matplotlib**
+   * **IPython**
 
 ### Files
     * **Dockerfile** : Docker configuration file for building the server image.
