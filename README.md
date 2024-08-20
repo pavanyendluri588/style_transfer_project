@@ -49,6 +49,27 @@ This project implements a style transfer algorithm using FastAPI and PyTorch. Th
    * **streamlit_app.py**: The main Streamlit application file that handles image upload, style transfer requests, and image display.
    * **requirements.txt**: Lists the Python dependencies needed to run the application.
 
+### API Endpoints
+   #### GET /
+   * **Description**: Basic endpoint to check if the server is running.
+   * **Response**: {"Hello": "World"}
+   #### POST /style_transfer
+   * **Description**: Apply style transfer to the provided content and style images.
+   * **Request Body**:
+        ``` bash
+            (
+                 "content_image": [/* Array of pixel values */],
+                 "style_image": [/* Array of pixel values */],
+                 "style_strength": 1e6
+            }
+        ```
+   * **Response**:
+        ``` bash
+        {
+           "target_image": [/* Array of pixel values */]
+        }
+        ```
+   
 ### Dependencies
    * **numpy: 1.26.4**
    * **pandas: 2.2.2**
@@ -56,7 +77,13 @@ This project implements a style transfer algorithm using FastAPI and PyTorch. Th
    * **requests: 2.31.0**
    * **streamlit: 1.34.0**
 
-### Usage
+### Files
+    * **Dockerfile** : Docker configuration file for building the server image.
+    * **app.py** : LFastAPI application that handles requests and applies the style transfer.
+    * **Style_transfer_algorithm.py** : Contains the implementation of the style transfer algorithm.
+    * **install_vgg19.py** : Script to install the pre-trained VGG19 model.
+    * **requirements.txt** : Lists the Python packages required for the project.
+
 ### Usage
 
    1.Send a POST request to /style_transfer with the required images and parameters.
